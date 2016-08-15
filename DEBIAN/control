@@ -1,7 +1,7 @@
- Package: acme-client
+ Package: sgsli-client
  Priority: optional
  Version: 0.0.1
  Architecture: i386
  Maintainer: Bruno Roberto Vasconcelos Tonia
  Depends: curl
- Description: Cliente ACME 
+ Description: Cliente de Sistema Operacional do Sistema de Gerenciamento de Softwares para Laboratórios de Informática 
