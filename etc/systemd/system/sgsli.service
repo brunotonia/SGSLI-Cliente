@@ -1,0 +1,25 @@
+[Unit]
+Description=SGSLI Cliente de Sistema Operacional
+After=network.service
+Before=
+After=
+
+# Dependências: "Wants" aponta quais serviços devem ser iniciados
+# quando o Postfix for iniciado. Note que isto NÃO indica nenhuma
+# ordem. A ordem é definida pelas diretivas After e Before.
+Wants=network.service
+
+# Esta seção define o serviço propriamente dito.
+# O tipo "forking" define um daemon que inicia,
+# dispara um processo em background e, em seguida,
+# termina. É o caso de TODOS os serviços sysVinit.
+[Service]
+Type=forking
+ExecStart=/etc/init.d/postfix start
+ExecStop=/etc/init.d/postfix stop
+ExecReload=/etc/init.d/postfix reload
+
+# Esta seção trata de "runlevels". No linguajar do
+# systemd, isto significa "targets".
+[Install]
+WantedBy=multi-user.target

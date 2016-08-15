@@ -1,0 +1,7 @@
+ Package: acme-client
+ Priority: optional
+ Version: 0.0.1
+ Architecture: i386
+ Maintainer: Bruno Roberto Vasconcelos Tonia
+ Depends: curl
+ Description: Cliente ACME 
